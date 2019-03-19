@@ -6,6 +6,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      source:{
+        newsapiURL: 'https://newsapi.org/v2/',
+        apiKey: '720e790d4beb43a0bebd7f0aa6fca805'
+      },
       news1: {
         type: 'top-headlines',
         query: 'sources=bbc-news'
@@ -20,7 +24,10 @@ class App extends Component {
       },
       news4: {
         type: 'everything',
-        query: 'sources=fox-news'
+        query: 'sources=fox-news',
+        pageSize: 3,
+        language: 'en',
+        sortBy: 'relevancy'
       }
     };
   }
@@ -37,7 +44,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col s8">
-            <News news={this.state.news4} />
+            <News news={this.state.news4} source={this.state.source} />
             {/* <News news={this.state.news2} /> */}
           </div>
          
