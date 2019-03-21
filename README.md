@@ -1,7 +1,13 @@
-<h1>News App</h1>
-<h2>links to a number of 
+<h1>
+    News App
+</h1>
+
+<h2>
+    links to a number of 
 </h2>
-<p>This News App uses Axios API calls from www.newsapi.org Has pages for each catergory and within those
+
+<p>
+    This News App uses Axios API calls from www.newsapi.org Has pages for each catergory and within those
 </p>
 
 

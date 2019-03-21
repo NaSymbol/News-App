@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import News from './news-main/news';
+import Headlines from './news-main/headlines/headlines'
+import SlotNews from './news-main/slotNews/slotNews'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +16,7 @@ class App extends Component {
       },
       news1: {
         type: 'top-headlines',
-        query: 'sources=bbc-news'
+        pageSize: 10
       },
       news2: {
         type: 'everything',
@@ -25,7 +29,7 @@ class App extends Component {
       news4: {
         type: 'everything',
         query: 'sources=fox-news',
-        pageSize: 3,
+        pageSize: 1,
         language: 'en',
         sortBy: 'relevancy'
       }
@@ -33,25 +37,70 @@ class App extends Component {
   }
 
   render() {
+    const catergories = ["general", "health", "science"];
+    const listItem = catergories.map((item) =>
+      <div>
+      <h1>
+      {item}
+      </h1>
+      
+        <SlotNews news={this.state.news4} source={this.state.source} />
+      </div>
+    );
+
+
     return (
-      <div className="container-fluid">
-        <div className="navbar-fixed">
+      <Router>
+        <Header />
+      <div className="">
+        <div className="">
           <nav>
-            <div className="nav-wrapper indigo lighten-4">
-              <a href="/" className="bran-logo center">My Feed</a>
+            <div className="">
+              <a href="/" className="">My Feed</a>
             </div>
           </nav>
         </div>
-        <div className="row">
-          <div className="col s8">
+        <div className="">
+          <div className="">
             <News news={this.state.news4} source={this.state.source} />
-            {/* <News news={this.state.news2} /> */}
+            <Headlines news={this.state.news1} source={this.state.source} />
+            <SlotNews news={this.state.news4} source={this.state.source} />
           </div>
          
+          {listItem}
+         </div>
+
       </div>
-      </div>
+      <Footer />
+      </Router>
     );
   }
 }
 
 export default App;
+
+
+function Header() {
+  return (
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/topics">Topics</Link>
+      </li>
+    </ul>
+  );
+}
+
+
+function Footer() {
+  return (
+    <div>
+      this is the footer.
+    </div>
+  );
+}

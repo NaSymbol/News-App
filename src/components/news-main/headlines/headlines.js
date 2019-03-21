@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from './card';
 
-class News extends Component {
+class Headlines extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,12 +12,10 @@ class News extends Component {
   }
 
   componentDidMount() {
-    const newsapiURL = 'https://newsapi.org/v2/';
-    const apiKey = '720e790d4beb43a0bebd7f0aa6fca805';
-    const pageSize = 3;
-    const language = 'en';
-    const sortBy = 'relevancy';
-    const url = `${newsapiURL}${this.props.news.type}?${this.props.news.query}&apiKey=${apiKey}&sortBy=${sortBy}&pageSize=${pageSize}&language=${language}`;
+
+    // const url = `${this.props.source.newsapiURL}${this.props.news.type}?apiKey=${this.props.source.apiKey}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=720e790d4beb43a0bebd7f0aa6fca805
+    `
 
     fetch(url)
       .then((response) => {
@@ -53,4 +51,4 @@ class News extends Component {
   
 }
 
-export default News;
+export default Headlines;
