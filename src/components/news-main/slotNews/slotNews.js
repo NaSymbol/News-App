@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './card';
+import Cards from './card';
 
 class SlotNews extends Component {
   constructor(props) {
@@ -13,8 +13,9 @@ class SlotNews extends Component {
 
   componentDidMount() {
 
-    const url = `${this.props.source.newsapiURL}${this.props.news.type}?${this.props.news.query}&apiKey=${this.props.source.apiKey}&sortBy=${this.props.news.sortBy}&pageSize=${this.props.news.pageSize}&language=${this.props.news.language}`;
-
+    const url = `${this.props.source.newsapiURL}${this.props.news.type}?pageSize=${this.props.news.pageSize}&q=${this.props.category}&apiKey=${this.props.source.apiKey}`;
+    // const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=720e790d4beb43a0bebd7f0aa6fca805`
+    
     fetch(url)
       .then((response) => {
         return response.json();
@@ -34,7 +35,7 @@ class SlotNews extends Component {
 
   renderItems() {
       return this.state.news.map((item) => (
-        <Card key={item.url} item={item} />
+        <Cards key={item.url} item={item} />
       ));
   }
 

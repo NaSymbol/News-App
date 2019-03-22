@@ -31,3 +31,14 @@
 img{
   width:100%;
 }
+
+
+
+.card-cat div .card:nth-child(2) .card-image{
+  width:50%;
+
+}
+
+.card-cat{
+background-color: lightgray;
+}

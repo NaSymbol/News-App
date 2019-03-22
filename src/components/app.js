@@ -20,7 +20,8 @@ class App extends Component {
       },
       news2: {
         type: 'everything',
-        query: 'domains=techcrunch.com&language=en'
+        pageSize: 3
+
       },
       news3: {
         type: 'everything',
@@ -37,14 +38,16 @@ class App extends Component {
   }
 
   render() {
-    const catergories = ["general", "health", "science"];
-    const listItem = catergories.map((item) =>
-      <div>
+    // const catergories = ['all'];
+    const catergories = ['entertainment',  'health', 'science', 'sports', 'technology', 'business'];
+
+    const listItem = catergories.map((q) =>
+      <div className="card-cat">
       <h1>
-      {item}
+      {q}
       </h1>
       
-        <SlotNews news={this.state.news4} source={this.state.source} />
+        <SlotNews news={this.state.news2} source={this.state.source} pageSize={this.state.pageSize} category={q}/>
       </div>
     );
 
@@ -87,10 +90,10 @@ function Header() {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about">United states</Link>
       </li>
       <li>
-        <Link to="/topics">Topics</Link>
+        <Link to="/topics"></Link>
       </li>
     </ul>
   );

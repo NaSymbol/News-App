@@ -1,0 +1,50 @@
+
+
+
+
+.card{
+    border-bottom: 1px solid gray;
+    margin-top: 5px;
+
+}
+
+.card-image{
+    /* height: 180px; */
+    width: 100%;
+    display: block;
+    /* padding:5px; */
+
+}
+
+.card-title{
+    display: block;
+    text-align: center;
+    color:blue;
+    font-size:1.4rem;
+}
+
+.text-link{
+    text-decoration: none;
+
+}
+
+
+.card-content{
+    display: block;
+    /* background-color: aqua; */
+    /* text-align: center; */
+}
+
+
+.card-time{
+    color: green;
+    margin-right:10px;
+    font-weight: bolder;
+}
+
+/* move to else where */
+.card-cat:nth-child(2) .card.card-image{
+    width:50%;
+
+
+}

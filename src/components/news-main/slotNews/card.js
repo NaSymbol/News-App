@@ -1,26 +1,27 @@
 import React from 'react';
 // import moment from 'moment'
 import Moment from 'react-moment';
+import'./card.css';
+
 
 const Card = ({item}) => (
-  <div className="col s4">
+  
     <div className="card">
       <div className="card-image">
       <a href={item.url} target="_blank"><img src={item.urlToImage} alt={item.title}/></a>
       </div>
       <div className="card-content">
   
-      <a href={item.url} target="_blank"><p>{item.title}</p></a>
+      <a className="text-link" href={item.url} target="_blank"><p className="card-title">{item.title}</p></a>
         {/* <p>{moment(item.publishedAt).format()}</p> */}
-        <Moment format="LT" >{item.publishedAt}</Moment>
-        <p>{item.description}</p>
+        <p><Moment className="card-time" format="LT" >{item.publishedAt}</Moment>{item.description}</p>
  
       </div>
       <div className="card-action">
         {/* <a href={item.url} target="_blank">Full article</a> */}
       </div>
     </div>
-  </div>
+
 );
 
 export default Card;
