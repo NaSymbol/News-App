@@ -8,6 +8,7 @@
 
 .headlines h1{
     text-align: center;
+    width:100%;
 }
 
 
@@ -29,10 +30,17 @@
 @media (min-width:1024px){
 
     .headlines{
-        /* width: 30%; */
 
+        border:none;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .headlines p {
  
+    }
+    .headlines-single{
+        width:40%;
+        margin-left:20px;
     }
 }

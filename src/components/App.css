@@ -51,6 +51,16 @@ img{
   text-align: center;
   font-size: 2rem;
   text-transform: capitalize;
+  
+}
+@media(min-width:1024px){
+
+  .card-cat h1{
+      font-size: 3vw;
+  }
+
+
+
 }
 
 .card-cat:nth-child(1) h1{
