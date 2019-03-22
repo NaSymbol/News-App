@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cards from './card';
+import'./slotNews.css';
 
 class SlotNews extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class SlotNews extends Component {
 
   render() {
     return (
-      <div>
+      <div className="slotNews">
         {this.renderItems()}
       </div>
     );

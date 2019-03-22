@@ -30,7 +30,7 @@ class App extends Component {
       news4: {
         type: 'everything',
         query: 'sources=fox-news',
-        pageSize: 1,
+        pageSize: 3,
         language: 'en',
         sortBy: 'relevancy'
       }
@@ -56,16 +56,10 @@ class App extends Component {
       <Router>
         <Header />
       <div className="">
-        <div className="">
-          <nav>
-            <div className="">
-              <a href="/" className="">My Feed</a>
-            </div>
-          </nav>
-        </div>
+
         <div className="">
           <div className="">
-            <News news={this.state.news4} source={this.state.source} />
+            
             <Headlines news={this.state.news1} source={this.state.source} />
             <SlotNews news={this.state.news4} source={this.state.source} />
           </div>
@@ -85,25 +79,35 @@ export default App;
 
 function Header() {
   return (
+    <header>
+      <nav>
+        <h1>NewsApp</h1>
+        <h5>something something news</h5>
+      </nav>
+
+<div className="menu">
     <ul>
       <li>
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/about">United states</Link>
+        <Link to="/usa">United states</Link>
       </li>
       <li>
-        <Link to="/topics"></Link>
+        <Link to="/canada">Canada</Link>
       </li>
     </ul>
+    </div>
+    </header>
   );
 }
 
 
 function Footer() {
   return (
-    <div>
-      this is the footer.
-    </div>
+    <footer>
+      <div></div>
+      <p>The NewsApp Copyright 2019 all rights reserved.</p>
+    </footer>
   );
 }

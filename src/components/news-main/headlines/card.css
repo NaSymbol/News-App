@@ -1,0 +1,38 @@
+.headlines-single{
+    text-align: left;
+    border-bottom: 1px dotted rgb(221, 221, 221);}
+
+.headlines-icon{
+    margin-right:10px;
+}
+
+.headlines h1{
+    text-align: center;
+}
+
+
+@media (min-width:768px){
+
+    .headlines{
+        /* width: ; */
+        /* margin:0 auto; */
+        border-left: 1px solid lightgray;
+        /* float: left; */
+    }
+    .headlines p {
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+}
+
+
+@media (min-width:1024px){
+
+    .headlines{
+        /* width: 30%; */
+
+    }
+    .headlines p {
+ 
+    }
+}

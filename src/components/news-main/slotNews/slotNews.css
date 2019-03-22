@@ -1,0 +1,62 @@
+@media (min-width:768px){
+
+
+    .slotNews .card:nth-child(1n + 2) .card-image{
+    width:150px;
+    float:left;
+}
+
+.slotNews .card:nth-child(1n + 2) .card-title{
+    /* width:200px; */
+    text-align: left;
+}
+
+
+.slotNews .card:nth-child(1n + 2) .card-content{
+    /* width:200px; */
+    width: 500px;
+
+}
+
+
+
+}
+
+
+
+@media (min-width:1024px){
+    .card{
+        width:600px;
+    }
+    .card-content{
+        font-size:12px;
+        width:300px;
+        float:left;
+    }
+    .card-title{
+        font-size:12px;
+        float:left;
+        
+    }
+
+
+    .slotNews .card:nth-child(1n + 2) .card-image{
+    /* width:150px;
+    float:left; */
+}
+
+.slotNews .card:nth-child(1n + 2) .card-title{
+    /* width:200px; */
+    /* text-align: left; */
+}
+
+
+.slotNews .card:nth-child(1n + 2) .card-content{
+    /* width:200px; */
+    /* width: 500px; */
+  
+}
+
+
+
+}

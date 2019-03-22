@@ -42,7 +42,8 @@ class Headlines extends Component {
 
   render() {
     return (
-      <div>
+      <div className="headlines">
+      <h1>Top Headlines</h1>
         {this.renderItems()}
       </div>
     );
