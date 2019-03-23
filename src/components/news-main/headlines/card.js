@@ -6,7 +6,7 @@ import'./card.css';
 
 const Card = ({item}) => (
   <div className="headlines-single">
-   <a href={item.url} target="_blank"> <p><FaFileAlt className="headlines-icon" />{item.title}</p></a>
+   <a href={item.url} target="_blank" rel="noopener noreferrer"> <p><FaFileAlt className="headlines-icon" />{item.title}</p></a>
   </div>
 );
 

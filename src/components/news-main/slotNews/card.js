@@ -8,11 +8,11 @@ const Card = ({item}) => (
   
     <div className="card">
       <div className="card-image">
-      <a href={item.url} target="_blank"><img src={item.urlToImage} alt={item.title}/></a>
+      <a href={item.url} target="_blank" rel="noopener noreferrer"><img src={item.urlToImage} alt={item.title}/></a>
       </div>
       <div className="card-content">
   
-      <a className="text-link" href={item.url} target="_blank"><p className="card-title">{item.title}</p></a>
+      <a className="text-link" href={item.url} target="_blank" rel="noopener noreferrer"><p className="card-title">{item.title}</p></a>
         {/* <p>{moment(item.publishedAt).format()}</p> */}
         <p><Moment className="card-time" format="LT" >{item.publishedAt}</Moment>{item.description}</p>
  

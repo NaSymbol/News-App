@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './card';
+import Card from './card.js';
 
 class Headlines extends Component {
   constructor(props) {

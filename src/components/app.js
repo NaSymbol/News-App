@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import News from './news-main/news';
-import Headlines from './news-main/headlines/headlines'
-import SlotNews from './news-main/slotNews/slotNews'
+// import News from './news-main/news';
+import Headlines from './news-main/headlines/headlines.js'
+import SlotNews from './news-main/slotNews/slotNews.js'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
