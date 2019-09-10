@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './app.css';
 // import News from './news-main/news';
 import Headlines from './news-main/headlines/headlines.js'
 import SlotNews from './news-main/slotNews/slotNews.js'
