@@ -2,9 +2,7 @@
     News App
 </h1>
 
-<h2>
-    links to a number of 
-</h2>
+<p> A collection of news articles, display in a news site.
 
 <p>
     This News App uses Axios API calls from www.newsapi.org Has pages for each catergory and within those
@@ -21,4 +19,11 @@ In the project directory, you can run:
 ### `npm test`
 ### `npm run build`
 ### `npm run eject`
+### `npm install`
 
+<h1>Guide to get project working</h1>
+
+<ul>
+    <li>clone the Repo</li>
+    <li>npm start</li>
+</ul>
